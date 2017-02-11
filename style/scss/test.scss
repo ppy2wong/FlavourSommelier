@@ -1,0 +1,22 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: rebeccapurple;
+$border-radius: 30px;
+$box-color: palegoldenrod;
+$header-background-color: yellow;
+$margin: 20px;
+$padding: 10px;
+body {
+  font: 100% $font-stack;
+}
+
+.testBox {
+	color: $primary-color;
+	background-color: $box-color;
+	border-radius: $border-radius 0 $border-radius 0;
+	margin: $margin;
+	padding: $padding;
+
+	h1, h2, h3, h4 {
+		background-color: $header-background-color;
+	}
+}

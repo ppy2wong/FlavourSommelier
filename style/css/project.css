@@ -1,0 +1,658 @@
+/* Font settings */
+/* Color schemes */
+/* Responsive design breakpoints */
+/* Reusable mix-in for buttons - primary button */
+/* Reusable mix-in for buttons - secondary button */
+/* Box-shadow mix-in */
+/* border-box */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/* normalize.css */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden] {
+  display: none; }
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:active, a:hover {
+  outline: 0; }
+
+h1 {
+  font-size: 2em; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: 700; }
+
+dfn {
+  font-style: italic; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: \201C \201D \2018 \2019; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em; }
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0; }
+
+button, input {
+  line-height: normal; }
+
+button, html input[type=button],
+input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled], input[disabled] {
+  cursor: default; }
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body, figure {
+  margin: 0; }
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+/* Basic form and content wrap settings */
+body {
+  font: 16px "Quattrocento Sans", sans-serif; }
+
+h1 {
+  text-align: center;
+  font-family: "Playfair Display", serif; }
+
+a {
+  color: #B8860B;
+  font-weight: bold;
+  text-decoration: none; }
+
+/* Page header settings */
+.header {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  background: url("../../images/retina_wood.png");
+  -webkit-box-shadow: 0px 5px 5px 0px #545454;
+  -moz-box-shadow: 0px 5px 5px 0px #545454;
+  box-shadow: 0px 5px 5px 0px #545454; }
+  .header h1 {
+    color: #8b0000;
+    font-size: 3rem; }
+
+.contentWrap {
+  width: 80%;
+  margin: 0 auto;
+  padding: 5px; }
+
+/* Styles for search form */
+#searchForm {
+  /* Mandatory elements in search form */
+  /* Dietary restrictions */
+  /* Input field format */
+  /* Button format */ }
+  #searchForm div#basicForm {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center; }
+    #searchForm div#basicForm fieldset.search {
+      border: none; }
+    #searchForm div#basicForm a#restrictionControl {
+      padding: 10px;
+      margin: 2px; }
+  #searchForm div#restrictions {
+    /* Starts as hidden; only toggled when class .on is added */
+    display: none;
+    /* Dietary restrictions are in 2 columns for larger screens
+		and 1 column for smaller screens */ }
+    #searchForm div#restrictions .on {
+      display: block; }
+    #searchForm div#restrictions fieldset.restrictions {
+      border: none;
+      padding: 5px;
+      vertical-align: top;
+      display: inline-block;
+      width: 48%;
+      margin-right: 1%; }
+      @media (max-width: 768px) {
+        #searchForm div#restrictions fieldset.restrictions {
+          width: 97%;
+          margin-left: 1%;
+          margin-right: 1%; } }
+      @media (min-width: 769px) {
+        #searchForm div#restrictions fieldset.restrictions {
+          width: 47%;
+          margin-left: 1%;
+          margin-right: 1%; } }
+      #searchForm div#restrictions fieldset.restrictions legend {
+        border-left: 2px solid #8b0000;
+        border-bottom: 2px solid #8b0000;
+        padding: 10px; }
+      #searchForm div#restrictions fieldset.restrictions ul {
+        list-style-type: none; }
+  #searchForm input[type="text"] {
+    border: 2px solid #333333;
+    padding: 5px; }
+  #searchForm .buttons {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    #searchForm .buttons input#searchForRecipes {
+      border: 2px solid #8b0000;
+      color: #8b0000;
+      background-color: #FFFAF0;
+      padding: 10px;
+      margin: 5px;
+      font-weight: bold;
+      font-family: "Quattrocento Sans", sans-serif; }
+    #searchForm .buttons input#resetSearch {
+      border: 2px solid #8B4513;
+      color: #8B4513;
+      background-color: #F5DEB3;
+      padding: 10px;
+      margin: 5px;
+      font-weight: bold;
+      font-family: "Quattrocento Sans", sans-serif; }
+
+/* Loading icon panel */
+#loader {
+  text-align: center;
+  display: none; }
+
+/* Search for recipe listings */
+#recipeListings {
+  width: 100%;
+  /* Styles for error content */
+  /* Style for individual recipe card */
+  /* Format for More Recipes button */
+  /* Format for Yummly attribution */ }
+  #recipeListings .errorContentWrap {
+    width: 80%;
+    margin: 0 auto;
+    padding: 5px; }
+  #recipeListings .item {
+    margin: 10px auto;
+    display: inline-block;
+    vertical-align: top;
+    -webkit-box-shadow: 2px 2px 5px 0px #aaaaaa;
+    -moz-box-shadow: 2px 2px 5px 0px #aaaaaa;
+    box-shadow: 2px 2px 5px 0px #aaaaaa;
+    /* Item flex box wrapper (for easy alignment) */ }
+    @media (max-width: 768px) {
+      #recipeListings .item {
+        width: 97%;
+        margin-left: 1%;
+        margin-right: 1%; } }
+    @media (min-width: 769px) {
+      #recipeListings .item {
+        width: 47%;
+        margin-left: 1%;
+        margin-right: 1%; } }
+    #recipeListings .item .itemWrap {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 450px;
+      /* Recipe box adjusts itself in height depending on
+			viewport resolution */
+      /* Recipe card header */
+      /* Recipe card details */
+      /* Center recipe card buttons */ }
+      @media (max-width: 768px) {
+        #recipeListings .item .itemWrap {
+          height: 500px;
+          max-height: 600px; } }
+      @media (min-width: 769px) {
+        #recipeListings .item .itemWrap {
+          height: 400px; } }
+      #recipeListings .item .itemWrap h1 {
+        background-color: #8b0000;
+        color: #ffffff;
+        font-size: 2rem; }
+      #recipeListings .item .itemWrap .recipeDetailsWrap .image {
+        float: left;
+        margin-right: 5px;
+        padding: 20px; }
+        #recipeListings .item .itemWrap .recipeDetailsWrap .image img {
+          width: 90px;
+          height: 60px; }
+      #recipeListings .item .itemWrap .recipeDetailsWrap .description {
+        width: 80%;
+        vertical-align: center;
+        padding: 20px; }
+      #recipeListings .item .itemWrap .buttonWrap {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: row;
+        justify-content: center; }
+        #recipeListings .item .itemWrap .buttonWrap button.recipeButton {
+          border: 2px solid #8b0000;
+          color: #8b0000;
+          background-color: #FFFAF0;
+          padding: 10px;
+          margin: 5px;
+          font-weight: bold;
+          font-family: "Quattrocento Sans", sans-serif; }
+  #recipeListings #moreRecipesContainer .buttons {
+    text-align: center;
+    width: 30%;
+    margin: 5px auto; }
+    #recipeListings #moreRecipesContainer .buttons button {
+      border: 2px solid #8B4513;
+      color: #8B4513;
+      background-color: #F5DEB3;
+      padding: 10px;
+      margin: 5px;
+      font-weight: bold;
+      font-family: "Quattrocento Sans", sans-serif; }
+  #recipeListings #attributionContainer {
+    text-align: center; }
+
+/* App modal overlay - individual recipe details, wine pairings and location information
+will be placed within this overlay */
+.overlay {
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  /* Overlay content */ }
+  .overlay .overlayContent {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    z-index: 10;
+    background-color: white;
+    display: none;
+    border: 5px solid #8b0000;
+    position: relative;
+    /* Button for closing overlay */
+    /* Loading button */
+    /* Navigation bar */
+    /* Recipe panel */
+    /* Wine pairings panel */
+    /* LCBO Locations panel */
+    /* Generic button styling */ }
+    .overlay .overlayContent a.closeButton {
+      position: absolute;
+      color: black;
+      background: white;
+      border-radius: 50%;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      box-shadow: 0 0 5px black;
+      text-align: center;
+      text-decoration: none;
+      position: absolute;
+      top: -10px;
+      right: -10px; }
+    .overlay .overlayContent #loader {
+      display: none; }
+    .overlay .overlayContent nav ul {
+      /* Flexbox to save the day~ */
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      /* Use vertical nav bar for small screens (mobile portrait)...*/
+      /* ...and horizontal nav bar for larger screen (mobile landscape and up) */
+      align-items: center;
+      list-style-type: none;
+      padding: 0;
+      /* Nav bar items */ }
+      @media (max-width: 600px) {
+        .overlay .overlayContent nav ul {
+          flex-direction: column;
+          justify-content: space-between;
+          height: 120px; } }
+      @media (min-width: 601px) {
+        .overlay .overlayContent nav ul {
+          flex-direction: row;
+          justify-content: center; } }
+      .overlay .overlayContent nav ul li a {
+        background: #000000; }
+        @media (max-width: 600px) {
+          .overlay .overlayContent nav ul li a {
+            margin: 10px;
+            padding: 10px; } }
+        @media (min-width: 601px) {
+          .overlay .overlayContent nav ul li a {
+            margin: 5px;
+            padding: 10px; } }
+    .overlay .overlayContent #recipe {
+      /* Don't display by default, until .on class is triggered */
+      display: none;
+      width: 100%;
+      /* Error content */
+      /* Headers */
+      /* Recipe image display */
+      /* Recipe display information */
+      /* Center wine pairing buttons */ }
+      .overlay .overlayContent #recipe.on {
+        display: block; }
+      .overlay .overlayContent #recipe .errorContentWrap {
+        width: 80%;
+        margin: 0 auto;
+        padding: 5px; }
+      .overlay .overlayContent #recipe h1 {
+        color: #8b0000;
+        text-align: center;
+        font-size: 2rem; }
+      .overlay .overlayContent #recipe h2 {
+        font-size: 1rem;
+        text-align: center; }
+      .overlay .overlayContent #recipe .image {
+        display: inline-block;
+        vertical-align: top;
+        padding: 20px; }
+        @media (max-width: 768px) {
+          .overlay .overlayContent #recipe .image {
+            width: 100%; } }
+        @media (min-width: 769px) {
+          .overlay .overlayContent #recipe .image {
+            width: 35%;
+            margin-right: 1%; } }
+        .overlay .overlayContent #recipe .image img {
+          width: 150px;
+          height: 150px;
+          display: block; }
+      .overlay .overlayContent #recipe .description {
+        display: inline-block;
+        vertical-align: center;
+        padding: 10px;
+        /* Flavour chart */ }
+        @media (max-width: 768px) {
+          .overlay .overlayContent #recipe .description {
+            width: 100%; } }
+        @media (min-width: 769px) {
+          .overlay .overlayContent #recipe .description {
+            width: 60%; } }
+        .overlay .overlayContent #recipe .description .flavourChart {
+          width: 300px;
+          height: 300px; }
+      .overlay .overlayContent #recipe .buttonWrap {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: row;
+        justify-content: center; }
+        .overlay .overlayContent #recipe .buttonWrap button.findPairings {
+          border: 2px solid #8b0000;
+          color: #8b0000;
+          background-color: #FFFAF0;
+          padding: 10px;
+          margin: 5px;
+          font-weight: bold;
+          font-family: "Quattrocento Sans", sans-serif; }
+    .overlay .overlayContent #winePairings {
+      /* Don't display by default, until .on class is triggered */
+      display: none;
+      width: 100%;
+      /* Error content */
+      /* Headers */
+      /* List of pairings */
+      /* Formatting for flexslider (for displaying matching
+   		wines) */ }
+      .overlay .overlayContent #winePairings.on {
+        display: block; }
+      .overlay .overlayContent #winePairings .errorContentWrap {
+        width: 80%;
+        margin: 0 auto;
+        padding: 5px; }
+      .overlay .overlayContent #winePairings h1 {
+        color: #8b0000;
+        text-align: center;
+        font-size: 2rem; }
+      .overlay .overlayContent #winePairings h2 {
+        font-size: 1rem;
+        text-align: center; }
+      .overlay .overlayContent #winePairings .listOfPairings {
+        width: 40%;
+        margin: 3px auto;
+        /* Individual pairing item */ }
+        .overlay .overlayContent #winePairings .listOfPairings .pairingItem {
+          margin: 2px;
+          background: #dedede; }
+      .overlay .overlayContent #winePairings div.flexslider {
+        width: 80%;
+        margin-top: 10px;
+        margin-bottom: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        /* Slide lists */ }
+        .overlay .overlayContent #winePairings div.flexslider ul.slides {
+          margin: 0 30px;
+          /* Information for a specific wine */ }
+          .overlay .overlayContent #winePairings div.flexslider ul.slides li.winePairingInfo {
+            width: 90%;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            /* Summary */
+            /* Details */
+            /* Center the find stores button */ }
+            .overlay .overlayContent #winePairings div.flexslider ul.slides li.winePairingInfo .summary, .overlay .overlayContent #winePairings div.flexslider ul.slides li.winePairingInfo .details {
+              margin: 0;
+              padding: 0; }
+            .overlay .overlayContent #winePairings div.flexslider ul.slides li.winePairingInfo .summary {
+              width: 70%;
+              display: -webkit-box;
+              display: -moz-box;
+              display: -ms-flexbox;
+              display: -webkit-flex;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: center; }
+              .overlay .overlayContent #winePairings div.flexslider ul.slides li.winePairingInfo .summary img {
+                width: 120px;
+                height: 120px;
+                float: left; }
+            .overlay .overlayContent #winePairings div.flexslider ul.slides li.winePairingInfo .details {
+              width: 70%;
+              margin: 10px auto; }
+            .overlay .overlayContent #winePairings div.flexslider ul.slides li.winePairingInfo .buttonWrap {
+              display: -webkit-box;
+              display: -moz-box;
+              display: -ms-flexbox;
+              display: -webkit-flex;
+              display: flex;
+              flex-direction: row;
+              justify-content: center; }
+              .overlay .overlayContent #winePairings div.flexslider ul.slides li.winePairingInfo .buttonWrap button.findLocation {
+                border: 2px solid #8b0000;
+                color: #8b0000;
+                background-color: #FFFAF0;
+                padding: 10px;
+                margin: 5px;
+                font-weight: bold;
+                font-family: "Quattrocento Sans", sans-serif; }
+    .overlay .overlayContent #whereToBuy {
+      /* Don't display by default, until .on class is triggered */
+      display: none;
+      width: 100%;
+      /* Error content */
+      /* Headers */
+      /* Google maps */
+      /* Navigation list for the 10 nearest LCBO stores */ }
+      .overlay .overlayContent #whereToBuy.on {
+        display: block; }
+      .overlay .overlayContent #whereToBuy .errorContentWrap {
+        width: 80%;
+        margin: 0 auto;
+        padding: 5px; }
+      .overlay .overlayContent #whereToBuy h1 {
+        color: #8b0000;
+        text-align: center;
+        font-size: 2rem; }
+      .overlay .overlayContent #whereToBuy h2 {
+        font-size: 1rem;
+        text-align: center; }
+      .overlay .overlayContent #whereToBuy .locationMap {
+        width: 100%;
+        height: 600px; }
+      .overlay .overlayContent #whereToBuy .locationList {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        /* Styling as individual results */ }
+        .overlay .overlayContent #whereToBuy .locationList .locationInfo {
+          text-align: center;
+          margin-left: 2px;
+          margin-right: 2px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          padding: 5px;
+          color: #8B4513;
+          background-color: #F5DEB3;
+          width: 25px;
+          height: 25px;
+          line-height: 25px; }
+    .overlay .overlayContent .buttons {
+      text-align: center;
+      width: 30%;
+      margin: 5px auto; }
+      .overlay .overlayContent .buttons button {
+        border: 2px solid #8b0000;
+        color: #8b0000;
+        background-color: #FFFAF0;
+        padding: 10px;
+        margin: 5px;
+        font-weight: bold;
+        font-family: "Quattrocento Sans", sans-serif; }
+
+/* Footer */
+div#footer {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  color: #dedede; }
+  div#footer p.disclaimer {
+    font-size: 0.8rem;
+    padding: 2px; }

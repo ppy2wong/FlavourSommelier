@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Flavour Sommelier</title>
+	<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700|Quattrocento+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="js/plugins/flexslider/flexslider.css">
+	<link rel="stylesheet" href="style/css/project.css">
+</head>
+<body>
+	<div class="header">
+		<div class="contentWrap">
+			<h1>Flavour Sommelier</h1>
+			<form id="searchForm">
+				<div id="basicForm">
+					<fieldset class="search">
+						<label for="dishName">Find a dish: </label>
+						<input type="text" name="dishName" id="dishName">
+					</fieldset>
+					<a id="restrictionControl"><span id="restrictionControlMode">Show</span> Dietary Restrictions</a>
+				</div>
+				<div id="restrictions">
+				<fieldset class="restrictions" id="allergies">
+					<legend>Allergies</legend>
+					<ul>
+						<li>
+							<input type="checkbox" name="allergyList" value="396^Dairy-Free"> Dairy-Free
+						</li>
+						<li>
+							<input type="checkbox" name="allergyList" value="397^Egg-Free"> Egg-Free
+						</li>
+						<li>
+							<input type="checkbox" name="allergyList" value="393^Gluten-Free"> Gluten-Free
+						</li>
+						<li>
+							<input type="checkbox" name="allergyList" value="394^Peanut-Free"> Peanut-Free
+						</li>
+						<li>
+							<input type="checkbox" name="allergyList" value="398^Seafood-Free"> Seafood-Free
+						</li>
+						<li>
+							<input type="checkbox" name="allergyList" value="399^Sesame-Free"> Sesame-Free
+						</li>
+						<li>
+							<input type="checkbox" name="allergyList" value="400^Soy-Free"> Soy-Free
+						</li>
+						<li>
+							<input type="checkbox" name="allergyList" value="401^Sulfite-Free"> Sulphite-free
+						</li>
+						<li>
+							<input type="checkbox" name="allergyList" value="395^Tree Nut-Free"> Tree Nut-free
+						</li>
+						<li>
+							<input type="checkbox" name="allergyList" value="392^Wheat-Free"> Wheat-free
+						</li>
+					</ul>
+				</fieldset>
+				<fieldset class="restrictions" id="diets">
+					<legend>Diets</legend>
+					<ul>
+						<li>
+							<input type="checkbox" name="dietList" value="388^Lacto vegetarian"> Lacto-vegetarian
+						</li>
+						<li>
+							<input type="checkbox" name="dietList" value="389^Ovo vegetarian"> Ovo-vegetarian
+						</li>
+						<li>
+							<input type="checkbox" name="dietList" value="390^Pescetarian"> Pescetarian
+						</li>
+						<li>
+							<input type="checkbox" name="dietList" value="386^Vegan"> Vegan
+						</li>
+						<li>
+							<input type="checkbox" name="dietList" value="387^Lacto-ovo vegetarian"> Lacto-ovo Vegetarian
+						</li>
+						<li>
+							<input type="checkbox" name="dietList" value="403^Paleo"> Paleo
+						</li>
+					</ul>
+				</fieldset>
+				</div>
+				<div class="buttons">
+					<input type="submit" id="searchForRecipes" value="Find recipes">
+					<input type="reset" id="resetSearch" value="Reset search criteria">
+				</div>
+
+			</form>
+		</div>
+	</div>
+	<div id="loader"><img src="images/ajax-loader.gif" alt=""></div>
+	<div id="recipeListings">
+	</div>
+	<div id="footer">
+		<p>&copy;2015 Peggy Wong</p>
+		<p class="disclaimer">This app is not a substitute for the advice of a trained wine-and-food-pairing expert. Please drink responsibly.</p>
+	</div>
+	<div class="overlay">
+		<div class="overlayContent">
+
+			<a href="#" class="closeButton" id="closeOverlay">&times;</a>
+			<nav>
+				<ul>
+					<li>
+						<a href="#" id="toggleRecipe">Recipes</a>
+					</li>
+					<li>
+						<a href="#" id="toggleWinePairing">Wine Pairings</a>
+					</li>
+					<li>
+						<a href="#" id="toggleLocation">Nearest Stores</a>
+					</li>
+				</ul>
+			</nav>
+			<div id="loader"><img src="images/ajax-loader.gif" alt=""></div>
+			<div id="recipe">	
+			</div>
+			<div id="winePairings">
+			</div>
+			<div id="whereToBuy">
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="js/plugins/flexslider/jquery.flexslider-min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/Chart.js/0.2.0/Chart.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
